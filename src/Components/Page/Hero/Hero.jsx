@@ -36,11 +36,12 @@ const Hero = () => {
             slot="container-start"
             className="parallax-bg"
             style={{
-              'background-image':
+              backgroundImage:
                 'url(https://i.ibb.co/b11KcBv/slider-3.jpg)',
                width:'130%',
                height:'130%',
-               objectFit:'contain'
+               objectFit:'contain',
+               opacity:0.5
             }}
             data-swiper-parallax="-23%"
           ></div>
@@ -48,7 +49,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="title" data-swiper-parallax="-200">
              <div>
-             <h1 className='mt-40'> Together</h1>
+             <h1 className='mt-40 font-bold'> Together</h1>
               <p>We can heal</p>
               <p>The Earth</p>
              </div>
@@ -56,22 +57,12 @@ const Hero = () => {
             
           </SwiperSlide>
           <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">
-              Slide 2
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
-            </div>
-            <div className="text" data-swiper-parallax="-100">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-              </p>
+          <div className="title" data-swiper-parallax="-200">
+             <div>
+             <h1 className='mt-40 font-bold'> Together</h1>
+              <p>We can heal</p>
+              <p>The Earth</p>
+             </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>

@@ -9,10 +9,12 @@ import {
 } from "react-router-dom";
 import Root from './Root/Root';
 import Home from './Components/Page/Home';
-import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
 import Estate from './Estate/Estate';
+import User from './Profile/User';
+import Update from './Profile/Update';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -21,20 +23,29 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch ('forest.json')
       },
       {
-        path:"/login",
-        element:<Login></Login>
+        path:"/user",
+        element:<User></User>
       },
       {
-        path: "/register",
-        element: <Register></Register>
+        path: "/update",
+        element: <Update></Update> 
       },
       {
         path:'/estate',
         element:<Estate></Estate>,
-        loader: () => fetch ('/forest.json')
+      
+      },
+      {
+        path:'/login',
+        element: <Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   },

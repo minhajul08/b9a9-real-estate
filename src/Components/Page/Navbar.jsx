@@ -16,8 +16,8 @@ const Navbar = () => {
   
     const navLinks = <>
         <li> <NavLink to="/">Home</NavLink> </li>
-        <li> <NavLink to="/login">Update Profile</NavLink> </li>
-        <li> <NavLink to="register">User Profile</NavLink> </li>
+        <li> <NavLink to="/update">Update Profile</NavLink> </li>
+        <li> <NavLink to="/user">User Profile</NavLink> </li>
 
     </>
     return (
@@ -31,7 +31,8 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-black">ForestExplorer</a>
+                <img className="w-16 object-fill mix-blend-multiply" src="/src/assets/logo.jpg" alt="" />
+                <h1 className="text-3xl font-bold">Forest Explore</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,7 +43,7 @@ const Navbar = () => {
                 {
                     user ?
                      <button onClick={handelSignOut} className="btn btn-secondary">Sign out</button>:
-                   <Link to="/login"><button className="btn btn-secondary">login</button></Link>
+                   <Link to="/login"><button className="btn bg-green-600 text-white font-bold">Login</button></Link>
                 }
             </div>
         </div>

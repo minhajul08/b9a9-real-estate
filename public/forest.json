@@ -1,123 +1,110 @@
-{
-    "estates": [
-      {
-        "id": "001",
-        "estate_title": "Secluded Cabin Retreat",
-        "segment_name": "Luxury",
-        "description": "Escape to the tranquility of the forest with this luxurious cabin retreat. Surrounded by nature, it offers peace and serenity.",
-        "price": "$500,000",
-        "status": "sale",
-        "area": "2500 sq ft",
-        "location": "Forest Grove, Oregon",
-        "facilities": ["Fireplace", "Deck", "Jacuzzi"],
-        "image": "https://example.com/secluded_cabin.jpg"
-      },
-      {
-        "id": "002",
-        "estate_title": "Rustic Log Cabin",
-        "segment_name": "Standard",
-        "description": "Experience the charm of a rustic log cabin nestled deep in the forest. Perfect for nature lovers seeking simplicity.",
-        "price": "$250,000",
-        "status": "sale",
-        "area": "1800 sq ft",
-        "location": "Big Bear Lake, California",
-        "facilities": ["Wood-burning stove", "Outdoor seating", "Hiking trails nearby"],
-        "image": "https://example.com/rustic_cabin.jpg"
-      },
-      {
-        "id": "003",
-        "estate_title": "Treehouse Retreat",
-        "segment_name": "Luxury",
-        "description": "Live among the trees in this luxurious treehouse retreat. Experience nature from a whole new perspective.",
-        "price": "$750,000",
-        "status": "sale",
-        "area": "3000 sq ft",
-        "location": "Redwood National Park, California",
-        "facilities": ["Wrap-around balcony", "Spa bath", "Floor-to-ceiling windows"],
-        "image": "https://example.com/treehouse_retreat.jpg"
-      },
-      {
-        "id": "004",
-        "estate_title": "Forest Lodge",
-        "segment_name": "Standard",
-        "description": "Cozy forest lodge perfect for family getaways. Enjoy hiking, bird watching, and starry nights around the campfire.",
-        "price": "$300 per night",
-        "status": "rent",
-        "area": "2000 sq ft",
-        "location": "Smokey Mountains, Tennessee",
-        "facilities": ["Fire pit", "Game room", "BBQ grill"],
-        "image": "https://example.com/forest_lodge.jpg"
-      },
-      {
-        "id": "005",
-        "estate_title": "Wilderness Cabin",
-        "segment_name": "Standard",
-        "description": "Experience the rugged beauty of the wilderness in this charming cabin. Perfect for adventurers and nature enthusiasts.",
-        "price": "$200,000",
-        "status": "sale",
-        "area": "1600 sq ft",
-        "location": "Yellowstone National Park, Wyoming",
-        "facilities": ["Rustic furnishings", "Mountain views", "Outdoor fire pit"],
-        "image": "https://example.com/wilderness_cabin.jpg"
-      },
-      {
-        "id": "006",
-        "estate_title": "Lakefront Retreat",
-        "segment_name": "Luxury",
-        "description": "Luxurious lakefront property nestled in the heart of the forest. Enjoy stunning views and serene surroundings.",
-        "price": "$1,200,000",
-        "status": "sale",
-        "area": "3500 sq ft",
-        "location": "Lake Tahoe, California",
-        "facilities": ["Private dock", "Outdoor kitchen", "Hot tub"],
-        "image": "https://example.com/lakefront_retreat.jpg"
-      },
-      {
-        "id": "007",
-        "estate_title": "Mountain Chalet",
-        "segment_name": "Standard",
-        "description": "Cozy mountain chalet with panoramic views of the surrounding forest. Ideal for winter retreats and summer getaways.",
-        "price": "$400,000",
-        "status": "sale",
-        "area": "2200 sq ft",
-        "location": "Aspen, Colorado",
-        "facilities": ["Stone fireplace", "Ski-in/ski-out access", "Wrap-around deck"],
-        "image": "https://example.com/mountain_chalet.jpg"
-      },
-      {
-        "id": "008",
-        "estate_title": "Riverfront Cabin",
-        "segment_name": "Standard",
-        "description": "Charming riverfront cabin perfect for fishing and relaxation. Enjoy the soothing sound of the river from your doorstep.",
-        "price": "$180,000",
-        "status": "sale",
-        "area": "1500 sq ft",
-        "location": "Great Smoky Mountains, Tennessee",
-        "facilities": ["Covered porch", "Fishing dock", "Scenic views"],
-        "image": "https://example.com/riverfront_cabin.jpg"
-      },
-      {
-        "id": "009",
-        "estate_title": "Forest Hideaway",
-        "segment_name": "Standard",
-        "description": "Hidden gem nestled deep in the forest. Perfect for those seeking privacy and seclusion.",
-        "price": "$300,000",
-        "status": "sale",
-        "area": "2000 sq ft",
-        "location": "Coconino National Forest, Arizona",
-        "facilities": ["Large deck", "Fire pit", "Tranquil surroundings"],
-        "image": "https://example.com/forest_hideaway.jpg"
-      },
-      {
-        "id": "010",
-        "estate_title": "Treetop Cottage",
-        "segment_name": "Standard",
-        "description": "Quaint cottage nestled among the treetops. Perfect for a peaceful retreat away from the hustle and bustle.",
-        "price": "$150 per night",
-        "status": "rent",
-        "area": "1200 sq ft",
-        "location": "Hoh Rainforest, Washington",
-        "facilities": ["Wrap-around balcony", "Cozy fireplace", "Nature trails nearby"],
-        "image": "https://example.com/treetop_cottage.jpg"
-        }]
-}
+[
+  {
+    "id": 1,
+    "title": "Tranquil Forest Retreat",
+    "name": "Forest Haven",
+    "description": "Escape to this serene forest retreat surrounded by towering trees and peaceful sounds of nature.",
+    "price": "$550,000",
+    "status": "Largest",
+    "area": "3000 sq ft",
+    "location": "Greenwood Forest, Oregon",
+    "facilities": ["Hiking trails", "Picnic area", "Fire pit"],
+    "image": "https://i.ibb.co/J3f6BxF/10787-30.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Amazon Rainforest Eco-Lodge",
+    "name": "Rainforest Retreat",
+    "description": "Immerse yourself in the heart of the Amazon rainforest with this eco-lodge, offering an unforgettable adventure surrounded by diverse wildlife and lush vegetation.",
+    "price": "$300,000",
+    "status": "Small",
+    "area": "2000 sq ft",
+    "location": "Amazon Rainforest, Brazil",
+    "facilities": ["Canopy walkway", "Guided jungle tours", "Riverboat excursions"],
+    "image": "https://i.ibb.co/h17C9PW/Amazon.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Mountain Retreat with Forest Views",
+    "name": "Mountain Vista",
+    "description": "Mountain retreat offering stunning panoramic views of the surrounding forests and peaks.",
+    "price": "$750,000",
+    "status": "Largest",
+    "area": "4000 sq ft",
+    "location": "Evergreen Heights, Colorado",
+    "facilities": ["Hot tub", "Wrap-around deck", "Gourmet kitchen"],
+    "image": "https://i.ibb.co/CzmSt7j/Mountain-Retreat.webp"
+  },
+  {
+    "id": 4,
+    "title": "Secluded Wilderness Hideaway",
+    "name": "Wilderness Haven",
+    "description": "Escape to this secluded forest hideaway, where you can truly disconnect and unwind.",
+    "price": "$450,000",
+    "status": "Small",
+    "area": "2500 sq ft",
+    "location": "Deep Forest Reserve, Montana",
+    "facilities": ["Private lake access", "Outdoor sauna", "Observation deck"],
+    "image": "https://i.ibb.co/5L9F89r/404966107.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Enchanted Forest Cottage",
+    "name": "Forest Cottage",
+    "description": "Charming cottage nestled deep within an enchanted forest, offering a magical retreat for nature enthusiasts.",
+    "price": "$400,000",
+    "status": "Small",
+    "area": "1800 sq ft",
+    "location": "Whispering Woods, Vermont",
+    "facilities": ["Stone fireplace", "Cozy reading nook", "Garden with woodland views"],
+    "image": "https://i.ibb.co/bzvNR0z/Enchanted.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Valdivian Temperate Rainforest",
+    "name": "Rainforest",
+    "description": "Spread across Chile and Argentina, this temperate rainforest, is a unique mix of evergreen and deciduous trees. The forest, spanning across 248,100 sq km, is home to some of the most diverse landscapes and ancient trees.",
+    "price": "$800,000",
+    "status": "Largest",
+    "area": "248,100 sq km",
+    "location": "Treetop Grove, California",
+    "facilities": ["Spa with forest views", "Outdoor kitchen", "Observation deck"],
+    "image": "https://i.ibb.co/547z7RW/Valdivian-Temperate-Rainforest-Chile-and-Argentina.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Secluded Forest Mansion",
+    "name": "Forest Manor",
+    "description": "Sprawling mansion tucked away in a secluded forest setting, offering unparalleled privacy and luxury.",
+    "price": "$1,200,000",
+    "status": "Largest",
+    "area": "8000 sq ft",
+    "location": "Silent Grove, New York",
+    "facilities": ["Indoor pool", "Home theater", "Tennis court"],
+    "image": "https://i.ibb.co/RCpPnf6/Secluded.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Antonia Forest",
+    "name": "Antonia Forest",
+    "description": "Riverside retreat surrounded by lush forest, offering tranquil views and recreational opportunities.",
+    "price": "$600,000",
+    "status": "Largest",
+    "area": "3500 sq ft",
+    "location": "Riverbend Estates, Montana",
+    "facilities": ["Private river access", "Outdoor dining area", "Fishing dock"],
+    "image": "https://i.ibb.co/chdC36x/Riverside.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Green Forest",
+    "name": "Nature Lodge",
+    "description": "Lodge nestled within a wildlife sanctuary, offering guests the chance to experience the beauty of nature up close.",
+    "price": "$700,000",
+    "status": "Largest",
+    "area": "4000 sq ft",
+    "location": "Wildlife Preserve, Alaska",
+    "facilities": ["Guided nature walks", "Birdwatching station", "Campfire area"],
+    "image": "https://i.ibb.co/M5R3BGh/s-l1200.webp"
+  }
+]

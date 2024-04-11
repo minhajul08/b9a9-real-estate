@@ -1,3 +1,5 @@
+import { FcGoogle } from "react-icons/fc";
+import { FaXTwitter } from "react-icons/fa6";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -52,9 +54,9 @@ const Login = () => {
           <Navbar></Navbar>
           <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0   lg:w-[500px] shadow-2xl bg-base-100 ">
             <form onSubmit={handelLogin} className="card-body">
-            <h1 className="text-5xl font-bold mb-8">Login now!</h1>
+            <h1 className="text-5xl font-bold mb-8 text-center">Login now!</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -71,14 +73,16 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn bg-green-600 text-white text-lg ">Login</button>
               </div>
-              <button className="btn btn-primary" onClick={handelGoogleSign}>SIgn in with google</button>
-              <button className="btn btn-primary" onClick={handelGithubSignIn}>SIgn in with github</button>
-            </form>
-            {
-              <p className="ml-3 mb-4">New in this account? <Link className="text-blue-600 font-bold hover:underline " to="/register">Register</Link></p>
+              {
+              <p className="mx-auto mb-1">Don't have account? <Link className="text-blue-600 font-bold hover:underline " to="/register">Register</Link></p>
             }
+            <p className="text-center mb-2">Or</p>
+             <button className="btn bg-blue-600 text-white text-lg mb-2" onClick={handelGoogleSign}> <span className="w-6 h-6 bg-white  flex items-center mr-10"><FcGoogle className="mx-auto" /></span> Connect with Google</button>
+             <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center mr-10"><FaXTwitter  className="mx-auto " /></span> <span className="text-white">Connect with Twitter</span></button>
+            </form>
+           
           </div>
         </div>
       </div>     
