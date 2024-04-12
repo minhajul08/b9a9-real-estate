@@ -1,7 +1,7 @@
 
 import Estate from "../../Estate/Estate";
+import Slider from "../Sliders/Slider";
 import Footer from "./Footer";
-import Hero from "./Hero/Hero";
 import Navbar from "./Navbar";
 import { useLoaderData } from 'react-router-dom';
 
@@ -13,7 +13,8 @@ const Home = () => {
         <div>
              <div className="mx-12">
             <Navbar></Navbar>
-            <Hero></Hero>
+            <Slider></Slider>
+           
             <div className="text-center mt-7">
                 <h1 className="font-bold text-5xl">Forest Estates</h1>
                 <p className="mt-6">Explore our collection of forest estates, each offering a unique opportunity to immerse yourself in nature's beauty.</p>
