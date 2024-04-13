@@ -7,7 +7,10 @@ const Estate = ({forest}) => {
     // const {estates} =  useLoaderData ()
     // console.log (estates)
     return (
-        <div className="card card-compact shadow-xl">
+        <div className="card card-compact shadow-xl" 
+        data-aos="zoom-in-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
   <figure><img className="h-72" src={image} alt="Shoes" /></figure>
   <div className="card-body mx-5 space-y-2">
     <h2 className="card-title">{title}</h2>

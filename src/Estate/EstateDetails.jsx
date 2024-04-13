@@ -21,11 +21,15 @@ const EstateDetails = () => {
 
                 <Navbar></Navbar>
 
-                <div className="grid grid-cols-1 md:grid-cols-7 lg:gap-20 my-5 lg:my-10">
+                <div className="grid grid-cols-1 md:grid-cols-7 lg:gap-20 my-5 lg:my-10"  
+                data-aos="fade-up"
+                     data-aos-easing="linear"
+                     data-aos-duration="1000">
                     <div className="col-span-3 ">
                         <img className="h-full rounded-lg" src={image} alt={title} />
                     </div>
-                    <div className="col-span-4 space-y-6">
+                    <div className="col-span-4 space-y-6"
+                    >
                         <p className="text-green-600 text-xl uppercase">About with us</p>
                         <h1 className="text-5xl font-bold">{name} ,<br /><span>{title}</span></h1>
                         <p className="text-gray-600">{description}</p>
