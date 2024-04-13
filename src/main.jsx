@@ -16,6 +16,8 @@ import Update from './Profile/Update';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import ErrorPage from './Components/Page/ErrorPage';
+import EstateDetails from './Estate/EstateDetails';
+import PrivateRoute from './Root/PrivateRoutes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch ('forest.json')
+        loader: () => fetch ('/forest.json')
       },
       {
         path:"/user",
@@ -39,7 +41,16 @@ const router = createBrowserRouter([
       {
         path:'/estate',
         element:<Estate></Estate>,
+       
       
+      },
+      {
+        path:'/estateDetails/:id',
+        element:<PrivateRoute>
+          <EstateDetails></EstateDetails>
+          </PrivateRoute>,
+          loader: () => fetch ('/forest.json')
+  
       },
       {
         path:'/login',

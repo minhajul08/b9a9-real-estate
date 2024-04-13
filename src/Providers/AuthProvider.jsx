@@ -5,14 +5,17 @@ import auth from "../firebase/firebase.config";
 export const AuthContext = createContext (null);
 const AuthProvider = ({children}) => {
     const [user,setUser] = useState (null);
+    const [loading,setLoading] = useState (true)
     // create user
     const createUser = (email,password) => {
+        setLoading (true)
      return createUserWithEmailAndPassword (auth,email,password);
     }
 
     // login
 
     const signIn = (email,password) => {
+        setLoading (true)
         return signInWithEmailAndPassword (auth,email,password);
     }
     
@@ -26,6 +29,7 @@ const AuthProvider = ({children}) => {
       const unSubscribe = onAuthStateChanged (auth,currentUser => {
             console.log ('use see in the sky',currentUser)
             setUser (currentUser)
+            setLoading (false)
         })
         return () => {
             unSubscribe ();
@@ -37,7 +41,8 @@ const AuthProvider = ({children}) => {
         user,
         createUser,
         signIn,
-        logOut
+        logOut,
+        loading
     }
     return (
        <AuthContext.Provider value={authInfo}>

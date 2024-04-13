@@ -1,8 +1,9 @@
 // import {useLoaderData} from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
 import { FaChartArea } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Estate = ({forest}) => {
-    const {title,image,description,area,location} = forest;
+    const {id,title,image,description,area,location} = forest;
     // const {estates} =  useLoaderData ()
     // console.log (estates)
     return (
@@ -18,7 +19,9 @@ const Estate = ({forest}) => {
       <IoLocationOutline/></span>{location}</p>
     </div>
     <div className="card-actions">
-      <button className="btn bg-green-600 w-full text-white">Details</button>
+      <Link to={`/estateDetails/${id}`} className="w-full">
+      <button className="btn w-full bg-green-600  text-white">Details</button>
+        </Link>
     </div>
   </div>
 </div>

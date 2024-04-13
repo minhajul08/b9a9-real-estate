@@ -1,7 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaXTwitter } from "react-icons/fa6";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,10 +11,36 @@ import Navbar from "../Page/Navbar";
 import Footer from "../Page/Footer";
 
 const Login = () => {
+  const location = useLocation ();
+  const navigate = useNavigate ();
+  console.log ("location in the login page",location)
   const [loginError, setLoginError] = useState('');
   const [loginSuccess, setLoginSuccess] = useState('');
   const googleProvider = new GoogleAuthProvider ();
   const githubProvider = new GithubAuthProvider ();
+
+  
+  const {signIn} = useContext (AuthContext)
+  const handelLogin = e => {
+    e.preventDefault ();
+    const form = new FormData (e.currentTarget)
+    const email = form.get ('email')
+    const password = form.get ('password')
+    console.log (email,password);
+    setLoginError('');
+    setLoginSuccess('');
+    signIn (email,password)
+    .then (result => {
+      console.log (result.user)
+
+      setLoginSuccess(toast('user created successful'))
+      navigate (location?.state ? location.state : '/')
+    })
+    .catch (error => {
+      console.error(error)
+      setLoginError(toast.error(error.message))
+    })
+  }
 
   // google signIn
   const handelGoogleSign = () => {
@@ -28,25 +54,7 @@ const Login = () => {
       
     })
   }
-  const {signIn} = useContext (AuthContext)
-  const handelLogin = e => {
-    e.preventDefault ();
-    const form = new FormData (e.currentTarget)
-    const email = form.get ('email')
-    const password = form.get ('password')
-    console.log (email,password);
-    setLoginError('');
-    setLoginSuccess('');
-    signIn (email,password)
-    .then (result => {
-      console.log (result.user)
-      setLoginSuccess(toast('user created successful'))
-    })
-    .catch (error => {
-      console.error(error)
-      setLoginError(toast.error(error.message))
-    })
-  }
+  
 
   // github signIn
 
