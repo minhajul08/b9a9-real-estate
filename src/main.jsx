@@ -15,11 +15,13 @@ import User from './Profile/User';
 import Update from './Profile/Update';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import ErrorPage from './Components/Page/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

@@ -1,14 +1,18 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaXTwitter } from "react-icons/fa6";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import Navbar from "../Page/Navbar";
 import Footer from "../Page/Footer";
 
 const Login = () => {
+  const [loginError, setLoginError] = useState('');
+  const [loginSuccess, setLoginSuccess] = useState('');
   const googleProvider = new GoogleAuthProvider ();
   const githubProvider = new GithubAuthProvider ();
 
@@ -17,9 +21,11 @@ const Login = () => {
     signInWithPopup (auth,googleProvider)
     .then (result => {
       console.log (result.user)
+      
     })
     .catch (error => {
-      console.log (error.message)
+      console.log (error)
+      
     })
   }
   const {signIn} = useContext (AuthContext)
@@ -29,12 +35,16 @@ const Login = () => {
     const email = form.get ('email')
     const password = form.get ('password')
     console.log (email,password);
+    setLoginError('');
+    setLoginSuccess('');
     signIn (email,password)
     .then (result => {
       console.log (result.user)
+      setLoginSuccess(toast('user created successful'))
     })
     .catch (error => {
       console.error(error)
+      setLoginError(toast.error(error.message))
     })
   }
 
@@ -82,8 +92,14 @@ const Login = () => {
              <button className="btn bg-blue-600 text-white text-lg mb-2" onClick={handelGoogleSign}> <span className="w-6 h-6 bg-white  flex items-center mr-10"><FcGoogle className="mx-auto" /></span> Connect with Google</button>
              <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center mr-10"><FaXTwitter  className="mx-auto " /></span> <span className="text-white">Connect with Twitter</span></button>
             </form>
-           
+            {
+              loginError
+            }
+            {
+              loginSuccess
+            }
           </div>
+          <ToastContainer />
         </div>
       </div>     
       <Footer></Footer>
