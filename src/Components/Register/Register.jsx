@@ -6,6 +6,7 @@ import Footer from "../Page/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash,FaEye } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [registerError, setRegisterError] = useState('');
@@ -51,6 +52,9 @@ const Register = () => {
   return (
     <div>
       <Navbar></Navbar>
+       <Helmet>
+        <title>Register</title>
+       </Helmet>
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">

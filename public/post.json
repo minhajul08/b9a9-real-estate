@@ -1,0 +1,57 @@
+[
+    {
+        "id" :1,
+      "image": "https://i.ibb.co/zsQ46Rq/post5.jpg",
+      "title" :"KIDS CAN VOLUNTEER",
+      "comment":7,
+      "author": "Abraham",
+      "writer": "Blog, Children",
+      "description": "Did you know that kids can make a BIG difference in the world? At Forest Explore we believe that age is just a number when it comes to making a positive impact. That's why we're inviting kids of all ages to join us in our mission to change the world—one small act of kindness at a time!"
+    },
+    {
+        "id" :2,
+      "image": "https://i.ibb.co/Y26S2zf/post6.jpg.jpg",
+      "title" :"EARTH, ENVIRONMENT",
+      "comment":0,
+      "author": "John Maxwell",
+      "writer": "Blog, Fit Row",
+      "description": "🌿 Take a glimpse inside our forest conservation efforts with this captivating video! Join us as we venture into the heart of [Forest Name] and witness the beauty of nature in action. From tree planting and wildlife monitoring to trail maintenance and community outreach, every moment is a testament to our dedication to preserving this precious ecosystem. Watch now and be inspired to join our cause as a conservation volunteer! 🌳🦋"
+    },
+    {
+        "id" :3,
+      "image": "https://i.ibb.co/fdp7Ndr/post1.jpg",
+      "title" :"Life Style",
+      "comment":2,
+      "author": "Hoke",
+      "writer": "Blog, LifeStyle",
+      "description": "Join us in our mission to protect and preserve the natural beauty and biodiversity of Forest Explore. As a conservation volunteer, you'll have the opportunity to immerse yourself in the serene tranquility of the forest while making a meaningful difference in its conservation efforts."
+    },
+    {
+        "id" :4,
+      "image": "https://i.ibb.co/TvbBvf1/post2.jpg",
+      "title" :"ELEPHANT SANCTUARY",
+      "comment":7,
+      "author": "John Maxwell",
+      "writer": "Blog, Fit Row",
+      "description": "Our sanctuary is a sanctuary of compassion and dedication, where rescued elephants from various backgrounds, including circuses, logging industries, and tourism, find solace and healing. Situated amidst the tranquil beauty of AFRICAN, ANIMALS, our sanctuary provides a natural habitat where elephants can roam freely, bond with one another, and live out their days in peace."
+    },
+    {
+        "id" :5,
+      "image": "https://i.ibb.co/VDBypLr/post3.jpg",
+      "title" :"ENVIRONMENT, RENEWABLE ENERGY",
+      "comment":9,
+      "author": "John Maxwell",
+      "writer": "Blog, Fit Row",
+      "description": "Harnessing the power of nature, wind energy has emerged as a sustainable and efficient solution for meeting our growing energy needs while reducing our carbon footprint"
+    },
+    {
+        "id" :6,
+      "image": "https://i.ibb.co/N7PqFXx/post4.jpg",
+      "title" :"STANDARD POST FORMAT TITLE",
+      "comment":28,
+      "author": "Robert",
+      "writer": "Blog, Fit Row, Life Style",
+      "description": "Join us in our mission to protect and preserve the natural beauty and biodiversity of Forest Explore. As a conservation volunteer, you'll have the opportunity to immerse yourself in the serene tranquility of the forest while making a meaningful difference in its conservation efforts."
+    }
+    
+]

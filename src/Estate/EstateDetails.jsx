@@ -6,6 +6,7 @@ import Footer from "../Components/Page/Footer";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaChartArea, FaCheckCircle } from "react-icons/fa";
 import { BsCurrencyDollar } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 const EstateDetails = () => {
     const forests = useLoaderData();
     const { id } = useParams();
@@ -20,6 +21,9 @@ const EstateDetails = () => {
             <div className="mx-12">
 
                 <Navbar></Navbar>
+                <Helmet>
+                    <title>Estate-Details</title>
+                </Helmet>
 
                 <div className="grid grid-cols-1 md:grid-cols-7 lg:gap-20 my-5 lg:my-10"  
                 data-aos="fade-up"

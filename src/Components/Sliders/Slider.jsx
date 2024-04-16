@@ -1,4 +1,3 @@
-
 const Slider = () => {
   return (
     <div className="carousel w-full " >
@@ -22,6 +21,7 @@ const Slider = () => {
         </div>
       </div>
       <div id="slide2" className="carousel-item relative w-full">
+        
         <div>
           <img src="https://i.ibb.co/ZHsWzyD/slider-2.jpg" className="w-full" />
           <div className="absolute top-10 left-10 md:top-20 md:left-20 lg:top-40 lg:left-32 space-y-2 text-white"

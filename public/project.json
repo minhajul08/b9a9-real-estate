@@ -1,0 +1,44 @@
+[
+    {
+        "id" :1,
+      "image": "https://i.ibb.co/xJPkJCK/WIND-ENERGY.jpg",
+      "name": "WIND ENERGY",
+      "title": "ENVIRONMENT, RENEWABLE ENERGY",
+      "description": "Harnessing the power of nature, wind energy has emerged as a sustainable and efficient solution for meeting our growing energy needs while reducing our carbon footprint"
+    },
+    {
+        "id" :2,
+        "image": "https://i.ibb.co/MBQT4pv/project2.jpg",
+        "name": "ELEPHANT SANCTUARY",
+        "title": "AFRICAN, ANIMALS",
+        "description": "Our sanctuary is a sanctuary of compassion and dedication, where rescued elephants from various backgrounds, including circuses, logging industries, and tourism, find solace and healing. Situated amidst the tranquil beauty of AFRICAN, ANIMALS, our sanctuary provides a natural habitat where elephants can roam freely, bond with one another, and live out their days in peace."
+     },
+      {
+        "id" :3,
+        "image": "https://i.ibb.co/HhRS108/project3.jpg",
+        "name": "CONSERVATION VOLUNTEER",
+        "title": "CLEANING, VOLUNTEER",
+        "description": "Join us in our mission to protect and preserve the natural beauty and biodiversity of Forest Explore. As a conservation volunteer, you'll have the opportunity to immerse yourself in the serene tranquility of the forest while making a meaningful difference in its conservation efforts."
+      },
+      {
+        "id" :4,
+        "image": "https://i.ibb.co/QQ6FpfM/project4.jpg",
+        "name": "VIDEO INSIDE THIS POST",
+        "title": "EARTH, ENVIRONMENT",
+        "description": "🌿 Take a glimpse inside our forest conservation efforts with this captivating video! Join us as we venture into the heart of [Forest Name] and witness the beauty of nature in action. From tree planting and wildlife monitoring to trail maintenance and community outreach, every moment is a testament to our dedication to preserving this precious ecosystem. Watch now and be inspired to join our cause as a conservation volunteer! 🌳🦋"
+      },
+      {
+        "id" :5,
+        "image": "https://i.ibb.co/d2JJ0jP/project5.jpg",
+        "name": "ENERGY CONSERVATION",
+        "title": "ANIMALS, VOLUNTEER",
+        "description": "Energy conservation is the practice of using energy more efficiently and wisely, without sacrificing comfort or convenience. It encompasses a wide range of actions, from simple everyday habits like turning off lights when not in use to implementing energy-efficient technologies and practices in homes, businesses, and industries."
+      },
+      {
+        "id" :6,
+        "image": "https://i.ibb.co/BTxXqYc/project6.jpg",
+        "name": "KIDS CAN VOLUNTEER",
+        "title": "DONATION, VOLUNTEER",
+        "description": "Did you know that kids can make a BIG difference in the world? At Forest Explore we believe that age is just a number when it comes to making a positive impact. That's why we're inviting kids of all ages to join us in our mission to change the world—one small act of kindness at a time!"
+      }
+]

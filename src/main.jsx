@@ -11,13 +11,14 @@ import Root from './Root/Root';
 import Home from './Components/Page/Home';
 import AuthProvider from './Providers/AuthProvider';
 import Estate from './Estate/Estate';
-import User from './Profile/User';
 import Update from './Profile/Update';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import ErrorPage from './Components/Page/ErrorPage';
 import EstateDetails from './Estate/EstateDetails';
 import PrivateRoute from './Root/PrivateRoutes/PrivateRoute';
+import Works from './Components/Page/Works/Works';
+import Posts from './Components/Page/Posts/Posts';
 
 const router = createBrowserRouter([
   {
@@ -30,13 +31,21 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch ('/forest.json')
       },
-      {
-        path:"/user",
-        element:<User></User>
-      },
+       {
+        path: "/post",
+        element: <Posts></Posts>,
+        loader: () => fetch ('/post.json')
+       },
+       {
+        path: "works",
+        element:<Works></Works>,
+        loader: () => fetch ('/project.json')
+       },
       {
         path: "/update",
-        element: <Update></Update> 
+        element: <PrivateRoute>
+          <Update></Update> 
+        </PrivateRoute>
       },
       {
         path:'/estate',

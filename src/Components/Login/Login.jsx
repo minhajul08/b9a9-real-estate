@@ -9,6 +9,7 @@ import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebas
 import auth from "../../firebase/firebase.config";
 import Navbar from "../Page/Navbar";
 import Footer from "../Page/Footer";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const location = useLocation ();
@@ -70,6 +71,9 @@ const Login = () => {
     return (
         <div>
           <Navbar></Navbar>
+          <Helmet>
+            <title>Login</title>
+          </Helmet>
           <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="card shrink-0   lg:w-[500px] shadow-2xl bg-base-100 ">

@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet";
 import Estate from "../../Estate/Estate";
 import Slider from "../Sliders/Slider";
 import Footer from "./Footer";
@@ -11,6 +12,9 @@ const Home = () => {
     console.log(forests)
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
              <div className="mx-12">
             <Navbar></Navbar>
             <Slider></Slider>
@@ -20,7 +24,8 @@ const Home = () => {
                 <p className="mt-6">Explore our collection of forest estates, each offering a unique opportunity to immerse yourself in nature's beauty.</p>
             </div>
           <div className="mb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
+          >
                 {
                     forests.map(forest => <Estate key={forest.id} forest={forest}></Estate>)
                     
