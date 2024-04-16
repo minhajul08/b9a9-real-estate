@@ -1,12 +1,20 @@
 import { FiPhone } from "react-icons/fi";
 import { CiMobile4 } from "react-icons/ci";
 import { MdOutlineEmail,MdOutlineWatchLater } from "react-icons/md";
+import post1 from "../../assets/img4.jpg";
+import post2 from "../../assets/img5.jpg";
+import post3 from "../../assets/img6.jpg"
+import post4 from "../../assets/img7.jpg"
+import post5 from "../../assets/img8.jpg"
+import post6 from "../../assets/img9.jpg"
+import post7 from "../../assets/img10.jpg"
+import post8 from "../../assets/img11.jpg"
 const Footer = () => {
     return (
         <div>
           <footer className="footer p-10 bg-base-200 text-base-content">
    <div className="">
-   <p className="font-bold text-xl">ForestExplorer</p>
+   <p className="font-bold text-xl footer-title">ForestExplorer</p>
     <p className="mt-8 text-wrap">Every forest is a complex living system made up of thickly growing trees, bushes, vines, fungi, and other plants. Forests are also the homes of mammals, birds, insects, and many other animals
     </p>
    </div>
@@ -29,7 +37,7 @@ const Footer = () => {
     <h6 className="footer-title">Recent Posts</h6> 
      <div>
         <div className="flex gap-2 justify-center items-center">
-        <img className="w-32" src="/src/assets/img4.jpg" alt="" />
+        <img className="w-32" src={post1} alt="" />
         <div className="footer-title">
         <p>Team Member</p>
         <p className="flex items-center"> <MdOutlineWatchLater className="mr-1"/> 21 Mar 2014</p>
@@ -37,7 +45,7 @@ const Footer = () => {
         </div>
         <hr className="border-black mt-3 mb-3"></hr>
         <div className="flex gap-2 justify-center items-center">
-        <img className="w-32" src="/src/assets/img5.jpg" alt="" />
+        <img className="w-32" src={post2} alt="" />
         <div className="footer-title">
         <p>Volunteer</p>
         <p className="flex items-center"> <MdOutlineWatchLater className="mr-1"/> 21 Mar 2014</p>
@@ -50,12 +58,12 @@ const Footer = () => {
   <nav>
     <h6 className="footer-title">Recent Works</h6> 
     <div className="grid grid-cols-3 gap-2">
-        <img src="/src/assets/img7.jpg" alt="" />
-        <img src="/src/assets/img8.jpg" alt="" />
-        <img src="/src/assets/img9.jpg" alt="" />
-        <img src="/src/assets/img10.jpg" alt="" />
-        <img src="/src/assets/img11.jpg" alt="" />
-        <img src="/src/assets/img6.jpg" alt="" />
+        <img src={post3} alt="" />
+        <img src={post4} alt="" />
+        <img src={post5} alt="" />
+        <img src={post6} alt="" />
+        <img src={post7} alt="" />
+        <img src={post8} alt="" />
     </div>
   </nav>
 </footer>

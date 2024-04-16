@@ -10,7 +10,7 @@ const Posts = () => {
   console.log (newPost)
     return (
         <div>
-        <div className="mx-12">
+        <div className="mx-2 md:mx-4 lg:mx-12">
         <Navbar></Navbar>
      <div className="my-10">
      {
@@ -19,7 +19,7 @@ const Posts = () => {
             data-aos-duration="1000">
           <figure><img className="rounded-lg mt-4" src={post.image} alt={post.title} /></figure>
           <div className="grid grid-cols-7 items-center justify-between">
-            <div className="card-title col-span-1 ml-3 text-2xl md:ml-6 lg:ml-20">{
+            <div className="card-title col-span-1 ml-3 text-2xl ml-2 md:ml-6 lg:ml-20">{
               moment().format("D MMM")
               
             }</div>

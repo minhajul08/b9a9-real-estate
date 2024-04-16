@@ -8,9 +8,9 @@ const Works = () => {
     
     return (
   <div>
-        <div className="mx-12">
+        <div className="mx-2 md:mx-4 lg:mx-12">
         <Navbar></Navbar>
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10  
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-3 lg:my-10  
        " >
        {
             projects.map (project =>  <div key={project.id} className="card bg-base-100 shadow-xl 

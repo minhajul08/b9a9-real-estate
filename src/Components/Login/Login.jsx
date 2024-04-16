@@ -76,7 +76,7 @@ const Login = () => {
           </Helmet>
           <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
-          <div className="card shrink-0   lg:w-[500px] shadow-2xl bg-base-100 ">
+          <div className="card shrink-0   md:w-[500px] shadow-2xl bg-base-100 ">
             <form onSubmit={handelLogin} className="card-body">
             <h1 className="text-5xl font-bold mb-8 text-center">Login now!</h1>
               <div className="form-control">
