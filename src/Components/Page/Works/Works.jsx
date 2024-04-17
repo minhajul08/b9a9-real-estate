@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import { Helmet } from "react-helmet";
 
 const Works = () => {
     const projects = useLoaderData ();
@@ -8,6 +9,9 @@ const Works = () => {
     
     return (
   <div>
+    <Helmet>
+      <title>Recent works</title>
+    </Helmet>
         <div className="mx-2 md:mx-4 lg:mx-12">
         <Navbar></Navbar>
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-3 lg:my-10  

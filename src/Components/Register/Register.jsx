@@ -23,7 +23,6 @@ const Register = () => {
     console.log(name, photoUrl, email, password);
     setRegisterError('');
     setRegisterSuccess('');
-
     //  password condition
     if (password.length < 6) {
       return toast.error('password must be 6 character')
@@ -98,12 +97,7 @@ const Register = () => {
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
               </div>
-              {
-                registerError
-              }
-              {
-                registerSuccess
-              }
+             
               <div className="form-control mt-6">
                 <button className="btn bg-green-600 text-white text-xl">Register</button>
               </div>
@@ -119,7 +113,14 @@ const Register = () => {
 
         </div>
       </div>
-      <Footer></Footer>
+      <Footer> {
+                registerError
+              }
+              {
+                registerSuccess
+              }
+             </Footer>
+   
     </div>
   );
 };

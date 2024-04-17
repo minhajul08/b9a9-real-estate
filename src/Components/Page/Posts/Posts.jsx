@@ -5,11 +5,15 @@ import moment from "moment";
 import { FaRegComment } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa";
 import { PiBookOpenTextBold } from "react-icons/pi";
+import { Helmet } from "react-helmet";
 const Posts = () => {
   const newPost = useLoaderData ()
   console.log (newPost)
     return (
         <div>
+           <Helmet>
+                <title>Post</title>
+            </Helmet>
         <div className="mx-2 md:mx-4 lg:mx-12">
         <Navbar></Navbar>
      <div className="my-10">

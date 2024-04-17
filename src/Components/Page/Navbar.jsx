@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/logo.jpg";
+import userImg from "../../assets/user.png";
 
 const Navbar = () => {
     const {user,logOut} = useContext (AuthContext)
@@ -54,7 +55,7 @@ const Navbar = () => {
                     user?  <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                       <div className="w-10 rounded-full">
-                        <img title="Minhajul Islam Nirob" className="w-full" src="https://i.ibb.co/VtwRLTp/profile.jpg" />
+                        <img title="UserName" className="w-full" src={userImg} />
                       </div>
                     </div>
                     </div> : <div></div>

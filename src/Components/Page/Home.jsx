@@ -15,7 +15,7 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-             <div className="mx-12">
+             <div className="mx-3 md:mx-12">
             <Navbar></Navbar>
             <Slider></Slider>
            

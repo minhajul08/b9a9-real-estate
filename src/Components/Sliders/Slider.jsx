@@ -1,9 +1,9 @@
 const Slider = () => {
   return (
-    <div className="carousel w-full " >
-      <div id="slide1" className="carousel-item relative w-full">
+    <div className="carousel w-full  " >
+      <div id="slide1" className="carousel-item relative w-full rounded-lg">
         <div className="">
-          <img src="https://i.ibb.co/qyzKX1N/slider-1.jpg" className="w-full relative" />
+          <img src="https://i.ibb.co/qyzKX1N/slider-1.jpg" className="w-full relative rounded-lg" />
           <div className="absolute top-10 left-1/4 md:top-20 md:left-20 lg:top-40 lg:left-32 space-y-2 text-white"
             data-aos="fade-up"
             data-aos-easing="linear"
@@ -23,7 +23,7 @@ const Slider = () => {
       <div id="slide2" className="carousel-item relative w-full">
         
         <div>
-          <img src="https://i.ibb.co/ZHsWzyD/slider-2.jpg" className="w-full" />
+          <img src="https://i.ibb.co/ZHsWzyD/slider-2.jpg" className="w-full rounded-lg" />
           <div className="absolute top-10 left-1/4 md:top-20 md:left-20 lg:top-40 lg:left-32 space-y-2 text-white"
           data-aos="fade-up"
           data-aos-easing="linear"
@@ -40,7 +40,7 @@ const Slider = () => {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <div>
-          <img src="https://i.ibb.co/z62zyWT/slider-3.jpg" className="w-full" />
+          <img src="https://i.ibb.co/z62zyWT/slider-3.jpg" className="w-full rounded-lg" />
           <div className="absolute top-10 left-1/4 md:top-20 md:left-20 lg:top-40 lg:left-80 space-y-2 text-white"
           data-aos="fade-up"
           data-aos-easing="linear"
