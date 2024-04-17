@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -105,7 +105,7 @@ const Login = () => {
               }
               <p className="text-center mb-2">Or</p>
               <button className="btn bg-blue-600 text-white text-lg mb-2" onClick={handelGoogleSign}> <span className="w-6 h-6 bg-white  flex items-center mr-10"><FcGoogle className="mx-auto" /></span> Connect with Google</button>
-              <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center mr-10"><FaXTwitter className="mx-auto " /></span> <span className="text-white">Connect with Twitter</span></button>
+              <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center mr-10"><FaGithub className="mx-auto " /></span> <span className="text-white">Connect with Github</span></button>
             </form>
 
 
