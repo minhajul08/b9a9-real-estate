@@ -7,25 +7,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash,FaEye } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-  const [registerError, setRegisterError] = useState('');
-  const [registerSuccess, setRegisterSuccess] = useState('');
-  const [showPassword, setShowPassword] = useState(false)
-  const { createUser } = useContext(AuthContext);
-  const handelRegister = e => {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget)
-    const name = form.get('name')
-    const photoUrl = form.get('photo')
-    const email = form.get('email')
-    const password = form.get('password')
-    console.log(name, photoUrl, email, password);
-    setRegisterError('');
+  // react hook form
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => {
+    const {email,password} = data;
+     setRegisterError('');
     setRegisterSuccess('');
     //  password condition
     if (password.length < 6) {
-      return toast.error('password must be 6 character')
+      return toast.error('password must be 6 character');
     }
     if (!/[A-Z]/.test(password)) {
       return toast.error('Password must have an Uppercase letter in the password');
@@ -33,21 +31,52 @@ const Register = () => {
     if (!/[a-z]/.test(password)) {
       return toast.error('Password must have an lowercase letter in the password');
     }
-
     createUser(email, password)
-      .then(result => {
-        console.log(result.user)
-        setRegisterSuccess(toast('user created successful'))
-      })
-      .catch(error => {
-        // console.log (error)
-        setRegisterError(toast.error(error.message))
-      })
-
-
-
-
+    .then(result => {
+      console.log(result.user)
+      
+     setRegisterSuccess(toast('user created successful'))
+    })
+    .catch(error => {
+      // console.log (error)
+      setRegisterError(toast.error(error.message))
+    })
+ 
+   
   }
+
+
+  const [registerError, setRegisterError] = useState('');
+  const [registerSuccess, setRegisterSuccess] = useState('');
+  const [showPassword, setShowPassword] = useState(false)
+  const { createUser } = useContext(AuthContext);
+  // const handelRegister = e => {
+  //   e.preventDefault();
+  //   const form = new FormData(e.currentTarget)
+  //   const name = form.get('name')
+  //   const photoUrl = form.get('photo')
+  //   const email = form.get('email')
+  //   const password = form.get('password')
+  //   console.log(name, photoUrl, email, password);
+  //   setRegisterError('');
+  //   setRegisterSuccess('');
+  //   //  password condition
+  //   if (password.length < 6) {
+  //     return toast.error('password must be 6 character')
+  //   }
+  //   if (!/[A-Z]/.test(password)) {
+  //     return toast.error('Password must have an Uppercase letter in the password');
+  //   }
+  //   if (!/[a-z]/.test(password)) {
+  //     return toast.error('Password must have an lowercase letter in the password');
+  //   }
+
+ 
+
+
+
+
+  // }
   return (
     <div>
       <Navbar></Navbar>
@@ -58,25 +87,29 @@ const Register = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="card shrink-0  md:w-[500px] shadow-2xl bg-base-100">
-            <form onSubmit={handelRegister} className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <h1 className="text-5xl font-bold mb-8 text-center">Register now!</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                <input type="text" name="name" placeholder="Name" className="input input-bordered" 
+                 {...register("name", { required: true })}  />
+                 {errors.name && <span className="text-red-500">please type your name</span>}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
-                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" {...register("image")} />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+                <input type="email" name="email" placeholder="Email" className="input input-bordered" 
+                 {...register("email", { required: true })} />
+                 {errors.email && <span className="text-red-500">please type your email</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -86,8 +119,9 @@ const Register = () => {
                 name='password'
                   placeholder="Password"
                   className="input input-bordered relative"
-                  required 
+                  {...register("password", { required: true })}
                    />
+                   {errors.password && <span className="text-red-500">please type your password</span>}
                   <span className="absolute bottom-[196px] right-10" onClick={ () => setShowPassword (!showPassword) }>
                     {showPassword ? <FaEyeSlash></FaEyeSlash> :
                      <FaEye></FaEye>
