@@ -1,6 +1,6 @@
 const Slider = () => {
   return (
-    <div className="carousel w-full  " >
+    <div className="carousel w-full font-openSans " >
       <div id="slide1" className="carousel-item relative w-full rounded-lg">
         <div className="">
           <img src="https://i.ibb.co/qyzKX1N/slider-1.jpg" className="w-full relative rounded-lg" />
@@ -28,8 +28,8 @@ const Slider = () => {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1500">
-            <p className="text-4xl md:text-7xl font-medium text-[#2c2c2e]">Help Us</p>
-            <h1 className="text-3xl md:text-8xl font-bold"><span className="text-[#1e1e22]">Save Anim</span>als</h1>
+            <p className="text-4xl md:text-7xl font-medium text-[#f3f3f8]">Help Us</p>
+            <h1 className="text-3xl md:text-8xl font-bold"><span className="text-[#131314]">Save Anim</span>als</h1>
           </div>
         </div>
 

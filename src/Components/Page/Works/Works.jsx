@@ -12,7 +12,7 @@ const Works = () => {
     <Helmet>
       <title>Recent works</title>
     </Helmet>
-        <div className="mx-2 md:mx-4 lg:mx-12">
+        <div className="mx-2 md:mx-4 lg:mx-12 font-openSans">
         <Navbar></Navbar>
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-3 lg:my-10  
        " >

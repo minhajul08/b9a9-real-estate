@@ -18,7 +18,7 @@ const EstateDetails = () => {
 
     return (
         <div>
-            <div className="mx-12">
+            <div className="mx-3 lg:mx-12 font-openSans">
 
                 <Navbar></Navbar>
                 <Helmet>

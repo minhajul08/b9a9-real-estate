@@ -14,7 +14,7 @@ const Posts = () => {
            <Helmet>
                 <title>Post</title>
             </Helmet>
-        <div className="mx-2 md:mx-4 lg:mx-12">
+        <div className="mx-2 md:mx-4 lg:mx-12 font-openSans">
         <Navbar></Navbar>
      <div className="my-10">
      {

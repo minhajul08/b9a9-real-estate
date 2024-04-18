@@ -8,7 +8,7 @@ const Estate = ({forest}) => {
     // console.log (estates)
     return ( 
      
-          <div className="card card-compact shadow-xl" 
+          <div className="card card-compact shadow-xl font-openSans" 
           data-aos="fade-up"
             data-aos-duration="1000"
           // data-aos="zoom-in-right"
