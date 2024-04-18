@@ -117,8 +117,8 @@ const Login = () => {
 
             </div>
             <div className="flex justify-around">
-             <button className="btn bg-blue-600 text-white text-lg mb-2" onClick={handelGoogleSign}> <span className="w-6 h-6 bg-white  flex items-center "><FcGoogle className="mx-auto" /></span> Connect with Google</button>
-              <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center"><FaGithub className="mx-auto " /></span> <span className="text-white">Connect with Github</span></button>
+             <button className="btn bg-blue-600 text-white text-lg mb-2" onClick={handelGoogleSign}> <span className="w-6 h-6 bg-white  flex items-center "><FcGoogle className="mx-auto" /></span>  Google</button>
+              <button className="btn bg-blue-900 text-black text-lg mb-2" onClick={handelGithubSignIn}> <span className=" w-6 h-6 flex bg-white items-center"><FaGithub className="mx-auto " /></span> <span className="text-white">Github</span></button>
              </div>
 
           </div>

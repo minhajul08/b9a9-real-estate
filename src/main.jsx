@@ -11,7 +11,7 @@ import Root from './Root/Root';
 import Home from './Components/Page/Home';
 import AuthProvider from './Providers/AuthProvider';
 import Estate from './Estate/Estate';
-import Update from './Profile/Update';
+// import Update from './Profile/Update';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import ErrorPage from './Components/Page/ErrorPage';
@@ -41,12 +41,12 @@ const router = createBrowserRouter([
         element:<Works></Works>,
         loader: () => fetch ('/project.json')
        },
-      {
-        path: "/update",
-        element: <PrivateRoute>
-          <Update></Update> 
-        </PrivateRoute>
-      },
+      // {
+      //   path: "/update",
+      //   element: <PrivateRoute>
+      //     <Update></Update> 
+      //   </PrivateRoute>
+      // },
       {
         path:'/estate',
         element:<Estate></Estate>,

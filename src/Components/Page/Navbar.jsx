@@ -30,9 +30,7 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
-                        {
-                            user ? <li> <NavLink to="/update">Update Profile</NavLink> </li> : <li></li>
-                        }
+                      
                     </ul>
                 </div>
                 <img className="w-16 object-fill mix-blend-multiply" src={logo} alt="" />
@@ -41,9 +39,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
-                    {
-                        user ? <li> <NavLink to="/update">Update Profile</NavLink> </li> : <li></li>
-                    }
+                   
 
                 </ul>
             </div>
