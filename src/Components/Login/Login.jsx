@@ -46,15 +46,6 @@ const Login = () => {
         setLoginError(toast.error(error.message))
       })
   }
-  // const handelLogin = e => {
-  //   e.preventDefault();
-  //   const form = new FormData(e.currentTarget)
-  //   const email = form.get('email')
-  //   const password = form.get('password')
-  //   console.log(email, password);
-
-  // }
-
   // google signIn
   const handelGoogleSign = () => {
     signInWithPopup(auth, googleProvider)

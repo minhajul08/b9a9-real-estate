@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
+  const { createUser,updateUserProfile } = useContext(AuthContext);
   // react hook form
   const {
     register,
@@ -18,7 +19,7 @@ const Register = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    const {email,password} = data;
+    const {email,password,image,name} = data;
      setRegisterError('');
     setRegisterSuccess('');
     //  password condition
@@ -31,8 +32,15 @@ const Register = () => {
     if (!/[a-z]/.test(password)) {
       return toast.error('Password must have an lowercase letter in the password');
     }
+
+    // create user and update profile
+    
     createUser(email, password)
     .then(result => {
+      updateUserProfile (name,image)
+      .then ( () => {
+        
+      })
       console.log(result.user)
       
      setRegisterSuccess(toast('user created successful'))
@@ -45,36 +53,11 @@ const Register = () => {
    
   }
 
-
   const [registerError, setRegisterError] = useState('');
   const [registerSuccess, setRegisterSuccess] = useState('');
   const [showPassword, setShowPassword] = useState(false)
-  const { createUser } = useContext(AuthContext);
-  // const handelRegister = e => {
-  //   e.preventDefault();
-  //   const form = new FormData(e.currentTarget)
-  //   const name = form.get('name')
-  //   const photoUrl = form.get('photo')
-  //   const email = form.get('email')
-  //   const password = form.get('password')
-  //   console.log(name, photoUrl, email, password);
-  //   setRegisterError('');
-  //   setRegisterSuccess('');
-  //   //  password condition
-  //   if (password.length < 6) {
-  //     return toast.error('password must be 6 character')
-  //   }
-  //   if (!/[A-Z]/.test(password)) {
-  //     return toast.error('Password must have an Uppercase letter in the password');
-  //   }
-  //   if (!/[a-z]/.test(password)) {
-  //     return toast.error('Password must have an lowercase letter in the password');
-  //   }
-
+  
  
-
-
-
 
   // }
   return (

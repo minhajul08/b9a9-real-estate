@@ -4,22 +4,21 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import logo from "../../assets/logo.jpg";
 
 const Navbar = () => {
-    const {user,logOut} = useContext (AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const handelSignOut = () => {
-       logOut ()
-       .then (result => {
-        console.log (result.user)
-       })
-       .catch (error => {
-        console.log (error.message)
-       })
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
-  
+
     const navLinks = <>
         <li> <NavLink to="/">Home</NavLink> </li>
         <li> <NavLink to="/post">Recent Post</NavLink> </li>
         <li> <NavLink to="/works">Recent Works</NavLink> </li>
-        <li><NavLink to="/signIn">SignIn</NavLink></li>
 
     </>
     return (
@@ -32,8 +31,8 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
                         {
-                    user ? <li> <NavLink to="/update">Update Profile</NavLink> </li>:<li></li>
-                }
+                            user ? <li> <NavLink to="/update">Update Profile</NavLink> </li> : <li></li>
+                        }
                     </ul>
                 </div>
                 <img className="w-16 object-fill mix-blend-multiply" src={logo} alt="" />
@@ -41,29 +40,29 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    { navLinks }
-                {
-                    user ? <li> <NavLink to="/update">Update Profile</NavLink> </li>:<li></li>
-                }
-                 
+                    {navLinks}
+                    {
+                        user ? <li> <NavLink to="/update">Update Profile</NavLink> </li> : <li></li>
+                    }
+
                 </ul>
             </div>
-          
+
             <div className="navbar-end">
-                
+
                 {
-                    user?  <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                      <div className="w-10 rounded-full">
-                        <img title="UserName" className="w-full" src="https://i.ibb.co/KrT77zY/user.png" />
-                      </div>
-                    </div>
+                    user ? <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img title={user?.displayName || "userName not found"} className="w-full" src={user?.photoURL || "https://i.ibb.co/KrT77zY/user.png}"} />
+                            </div>
+                        </div>
                     </div> : <div></div>
                 }
                 {
                     user ?
-                     <button onClick={handelSignOut} className="btn bg-green-600 text-white font-bold">Sign out</button>:
-                   <Link to="/login"><button className="btn bg-green-600 text-white font-bold">Login</button></Link>
+                        <button onClick={handelSignOut} className="btn bg-green-600 text-white font-bold">Sign out</button> :
+                        <Link to="/login"><button className="btn bg-green-600 text-white font-bold">Login</button></Link>
                 }
             </div>
         </div>
